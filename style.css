@@ -1,0 +1,52 @@
+:root {
+  --bg: #f7f7fa;
+  --card: #ffffff;
+  --text: #16161d;
+  --muted: #5f6070;
+  --line: #e4e4ec;
+  --accent: #3a5cf5;
+  --accent-2: #7a3ee6;
+  --ok-bg: #eef3ff;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e13;
+    --card: #17171f;
+    --text: #ececf2;
+    --muted: #a3a4b5;
+    --line: #2a2a36;
+    --accent: #7d95ff;
+    --accent-2: #a97cff;
+    --ok-bg: #1b2140;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--text); text-decoration: none; }
+.logo {
+  width: 34px; height: 34px; border-radius: 9px; display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+nav.langs { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+nav.langs a { padding: 4px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+nav.langs a[aria-current="true"] { background: var(--accent); color: #fff; }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 21px; margin: 36px 0 8px; letter-spacing: -0.01em; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+.summary { background: var(--ok-bg); border-radius: 16px; padding: 18px 20px; margin: 20px 0 8px; }
+.summary ul { margin: 0; padding-left: 20px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+a { color: var(--accent); }
+code { font-size: 0.9em; background: var(--line); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
